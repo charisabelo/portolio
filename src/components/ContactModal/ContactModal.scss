@@ -1,0 +1,32 @@
+@use "../../partials/variables.scss" as *;
+
+.contact-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $modal-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    height: 50rem;
+    width: 60rem;
+    background-color: $white;
+    border-radius: 0.2rem;
+    padding: 0.3rem;
+  }
+
+  &__icon-container {
+    width: 100%;
+    height: fit-content;
+    text-align: right;
+  }
+
+  &__x-icon {
+    font-size: 3rem;
+    cursor: pointer;
+  }
+}

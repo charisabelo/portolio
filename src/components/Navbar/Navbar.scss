@@ -1,0 +1,29 @@
+@use "../../partials/variables.scss" as *;
+
+.navbar {
+  padding: 1.5rem 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 192rem;
+  background: $white;
+
+  &__logo {
+    font-size: 3.2rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &__link {
+    // color: hsl(359, 77%, 56%);
+
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+
+    &:hover {
+      color: $black-hover;
+    }
+  }
+}
