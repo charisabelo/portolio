@@ -13,12 +13,42 @@ const Header = () => {
             <span>Who</span> enjoys constructing solutions to problems.
           </p>
           <p className="header__about">
-            <span>Currently</span> based out of Hawaii, US and open <br /> to
+            <span>Currently</span> based out of 🌴 Hawaii, US and open <br /> to
             relocation or remote work.
           </p>
         </div>
       </div>
-      <div className="header__right"></div>
+      <div className="header__right">
+        <div className="header__tech-container">
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-html"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-css"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-js"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-sass"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-react"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-nodejs"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-express"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-mysql"></div>
+          </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-git"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
