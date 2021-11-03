@@ -1,12 +1,14 @@
 @use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
 
 .navbar {
-  padding: 1.5rem 2.5rem;
-  width: 100%;
+  padding: 1.5rem 2.5rem 1.6rem 2.5rem;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   max-width: 192rem;
   background: $white;
+  margin: 0 auto;
 
   &__logo {
     font-size: 3.2rem;
@@ -14,12 +16,17 @@
     cursor: pointer;
   }
 
-  &__link {
+  &__link,
+  &__link:active,
+  &__link:link,
+  &__link:visited {
     font-size: 2.5rem;
     cursor: pointer;
     display: flex;
     align-self: flex-end;
     margin-left: 1.1rem;
+    text-decoration: none;
+    color: $black;
 
     &:hover {
       color: $btn;
@@ -28,5 +35,71 @@
 
   &__links-list {
     display: flex;
+    margin-bottom: 0.3rem;
+  }
+
+  &__bars,
+  &__x {
+    display: flex;
+    align-self: center;
+    font-size: 2.5rem;
+    display: none;
+  }
+
+  @include tablet {
+    &__link,
+    &__link:active,
+    &__link:link,
+    &__link:visited {
+      font-size: 2rem;
+    }
+  }
+
+  @include mobile-tablet {
+    &__links-list {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      position: fixed;
+      background-color: $white;
+      border-radius: 1rem;
+      height: 23rem;
+      top: 5rem;
+      right: -100rem;
+      margin-left: auto;
+      margin-right: auto;
+      -webkit-transition: right 0.5s ease;
+      -o-transition: right 0.5s ease;
+      -moz-transition: right 0.5s ease;
+      transition: right 0.5s ease;
+      overflow: hidden;
+    }
+
+    &__x {
+      font-size: 3.2rem;
+    }
+
+    &__bars,
+    &__x {
+      display: flex;
+      cursor: pointer;
+    }
+
+    &__links-list.active#mobile-nav {
+      right: 2.2rem;
+      -webkit-transition: right 0.5s ease;
+      -o-transition: right 0.5s ease;
+      -moz-transition: right 0.5s ease;
+      transition: right 0.5s ease;
+      overflow: hidden;
+    }
+
+    &__link,
+    &__link:active,
+    &__link:link,
+    &__link:visited {
+      padding: 1rem;
+      font-size: 3rem;
+    }
   }
 }

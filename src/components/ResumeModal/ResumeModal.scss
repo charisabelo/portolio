@@ -1,1 +1,160 @@
 @use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
+
+.resume-modal {
+  position: fixed;
+  background-color: $modal-bg;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+
+  &__img {
+    background-image: url("../../files/resume.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 110rem;
+    width: 84rem;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__download-btn,
+  &__download-btn:visited,
+  &__download-btn:active,
+  &__download-btn:link {
+    background: $dwnld-btn;
+    color: $white;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1.5rem 3.6rem;
+    border-radius: 7rem;
+    height: 5.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__download-btn:hover {
+    background-color: $dwnld-btn-hover;
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    fill: $white;
+    stroke: $white;
+    stroke-width: 4rem;
+  }
+
+  &__exit-btn {
+    border: none;
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 50%;
+    background-color: $dwnld-btn;
+    color: $white;
+    filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.3));
+    margin-right: 6.7rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  &__exit-btn:hover {
+    background-color: $dwnld-btn-hover;
+  }
+
+  &__exit-icon {
+    font-size: 4rem;
+    margin-left: 0.1rem;
+    margin-top: 0.3rem;
+  }
+
+  @include tablet {
+    &__img {
+      padding-top: 2rem;
+    }
+
+    &__download-btn,
+    &__download-btn:visited,
+    &__download-btn:active,
+    &__download-btn:link {
+      height: 5rem;
+    }
+
+    &__exit-btn {
+      height: 5rem;
+      width: 5rem;
+      margin-right: 6rem;
+    }
+
+    &__exit-icon {
+      font-size: 3.4rem;
+      margin-left: 0.1rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  @include mobile-tablet {
+    &__img {
+      height: 80rem;
+      padding-top: 1rem;
+    }
+
+    &__download-btn,
+    &__download-btn:visited,
+    &__download-btn:active,
+    &__download-btn:link {
+      font-size: 1.5rem;
+      padding: 1rem 2.5rem;
+      height: 4rem;
+    }
+
+    &__exit-btn {
+      height: 4rem;
+      width: 4rem;
+      margin-right: 4.5rem;
+      margin-left: 1rem;
+    }
+
+    &__exit-icon {
+      font-size: 2.8rem;
+      margin-left: 0rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  @include mobile {
+    &__img {
+      height: 60rem;
+      padding-top: 0.7rem;
+    }
+
+    &__download-btn,
+    &__download-btn:visited,
+    &__download-btn:active,
+    &__download-btn:link {
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      height: 3rem;
+    }
+
+    &__exit-btn {
+      height: 3rem;
+      width: 3rem;
+      margin-right: 3.5rem;
+      margin-left: 1rem;
+    }
+
+    &__exit-icon {
+      font-size: 1.6rem;
+      margin-left: 0rem;
+      margin-top: 0.3rem;
+    }
+  }
+}

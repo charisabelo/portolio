@@ -1,4 +1,5 @@
 @use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
 
 input[type="number"] {
   -moz-appearance: textfield;
@@ -14,6 +15,7 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 
   &__content {
     height: 60rem;
@@ -99,9 +101,9 @@ input[type="number"] {
   &__phone,
   &__message {
     width: 30rem;
-    height: 3.8rem;
-    border: none;
-    border-radius: 0.2rem;
+    height: 4rem;
+    border: 0.1rem solid hsla(0, 0%, 59%, 0.5);
+    border-radius: 0.3rem;
     background-color: hsla(0, 0%, 96%, 0.9);
     margin-bottom: 1.5rem;
     padding-left: 1rem;
@@ -130,6 +132,63 @@ input[type="number"] {
 
     &:hover {
       background-color: $btn-hover;
+    }
+  }
+
+  @include tablet {
+    & {
+      overflow-y: scroll;
+    }
+
+    &__content {
+      width: 40rem;
+    }
+
+    &__header {
+      font-size: 3rem;
+    }
+
+    &__emoji {
+      width: 4rem;
+      height: auto;
+    }
+
+    &__main-container {
+      padding: 0 4rem;
+    }
+  }
+
+  @include mobile-tablet {
+    & {
+      overflow-y: scroll;
+    }
+  }
+
+  @include mobile {
+    &__content {
+      width: 30rem;
+    }
+
+    &__subject,
+    &__firstname,
+    &__email,
+    &__phone,
+    &__message {
+      width: 20rem;
+      overflow-y: scroll;
+    }
+  }
+
+  @include mobile-small {
+    & {
+      display: unset;
+    }
+
+    &__content {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 }
