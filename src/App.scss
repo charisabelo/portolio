@@ -20,5 +20,14 @@ html {
 }
 
 body {
-  margin: 0 auto;
+  // margin-right: auto;
+  // margin-left: auto;
+}
+
+.App {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }

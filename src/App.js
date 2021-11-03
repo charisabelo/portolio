@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar/Navbar";
 import "./App.scss";
 import { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -18,6 +19,11 @@ function App() {
           setShowModal={setShowModal}
           showModal={showModal}
         />
+        <div className="app__main">
+          <Switch>
+            <Route path="/" exact component={Home}></Route>
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
   );
