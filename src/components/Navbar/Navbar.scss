@@ -46,7 +46,7 @@
     display: none;
   }
 
-  @include tablet {
+  @include tablet-mid {
     &__link,
     &__link:active,
     &__link:link,
@@ -55,7 +55,7 @@
     }
   }
 
-  @include mobile-tablet {
+  @include tablet {
     &__links-list {
       display: flex;
       flex-direction: column;

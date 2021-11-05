@@ -33,7 +33,7 @@ const Navbar = ({ openModal, setShowModal, showModal }) => {
         <div className="navbar__link" onClick={openResumeModal}>
           resume.
         </div>
-        <a href="#project" className="navbar__link">
+        <a href="#projects" className="navbar__link">
           projects.
         </a>
         <Link

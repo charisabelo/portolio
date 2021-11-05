@@ -1,0 +1,55 @@
+@use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
+
+.projects {
+  // background-color: pink;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 192rem;
+  overflow: hidden;
+  padding: 2rem 13.2rem;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    font-size: 10rem;
+    margin-bottom: 4rem;
+  }
+
+  &__header span {
+    margin-right: 2rem;
+    font-weight: 700;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__container {
+    padding: 1.5rem;
+  }
+
+  &__container:nth-of-type(even) div {
+    background-color: $white;
+  }
+
+  &__container:nth-of-type(odd) div {
+    background-color: #161a1d;
+    color: $white;
+  }
+
+  &__container:nth-of-type(even) div .project__tech {
+    color: $white;
+    background-color: #161a1d;
+  }
+
+  &__container:nth-of-type(odd) div .project__tech {
+    color: #161a1d;
+    background-color: $white;
+  }
+}
