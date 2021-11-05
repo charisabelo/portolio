@@ -1,4 +1,5 @@
 import "./Header.scss";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -16,6 +17,13 @@ const Header = () => {
             <span>Currently</span> based out of 🌴 Hawaii, US and open <br /> to
             relocation or remote work.
           </p>
+        </div>
+      </div>
+      <div className="header__mid">
+        <div className="header__arrow-container">
+          <a href="#projects" className="header__link">
+            <MdKeyboardArrowDown className="header__arrow-icon" />
+          </a>
         </div>
       </div>
       <div className="header__right">

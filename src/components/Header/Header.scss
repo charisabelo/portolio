@@ -6,17 +6,20 @@
   display: flex;
   width: 100vw;
   max-width: 192rem;
+  overflow: hidden;
 
   &__left {
-    background-color: pink;
-    width: 50%;
+    width: 48%;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    // background-color: red;
   }
 
   &__about-container {
     animation: slideInRight 1s forwards;
+    padding: 3rem;
   }
 
   &__heading {
@@ -33,12 +36,42 @@
     font-weight: 700;
   }
 
+  &__mid {
+    width: 4%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__arrow-container {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__arrow-icon {
+    position: relative;
+    font-size: 8rem;
+    cursor: pointer;
+    animation: slideInUp 1s forwards;
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:active,
+  &__link:link,
+  &__link:hover {
+    cursor: none;
+    text-decoration: none;
+    color: $black;
+  }
+
   &__right {
     // background-color: grey;
-    width: 50%;
+    width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   &__tech-container {
@@ -52,8 +85,8 @@
   &__tech {
     background-repeat: no-repeat;
     background-size: contain;
-    height: 15rem;
-    width: 15rem;
+    height: 14rem;
+    width: 14rem;
     background-position: center;
   }
 
@@ -75,7 +108,7 @@
 
   &__tech-js {
     background-image: url("../../files/js.png");
-    background-size: 133px;
+    background-size: 135px;
   }
 
   &__tech-sass {
@@ -106,12 +139,32 @@
 
   @include web-mid {
     &__heading {
-      font-size: 7.6rem;
+      font-size: 7.2rem;
     }
 
     &__about {
-      font-size: 2.8rem;
+      font-size: 2.6rem;
     }
+  }
+
+  &__tech-container {
+    width: 45rem;
+  }
+
+  &__tech {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 11rem;
+    width: 11rem;
+    background-position: center;
+  }
+
+  &__tech-css {
+    background-size: 128px;
+  }
+
+  &__tech-js {
+    background-size: 118px;
   }
 }
 
@@ -130,5 +183,14 @@
   }
   100% {
     tranform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    bottom: -20rem;
+  }
+  to {
+    bottom: 0;
   }
 }
