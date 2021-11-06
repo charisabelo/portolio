@@ -3,7 +3,6 @@ import "./Projects.scss";
 import { projectItems } from "./ProjectItems";
 
 const Projects = () => {
-  console.log(projectItems);
   return (
     <div className="projects">
       <h1 className="projects__header">
@@ -13,23 +12,11 @@ const Projects = () => {
       <div className="projects__main">
         {projectItems.map((item) => {
           return (
-            <div className="projects__container" key={item.id}>
-              <Project className="projects__single" {...item} />
+            <div key={item.id} className="projects__container">
+              <Project key={item.id} className="projects__single" {...item} />
             </div>
           );
         })}
-        {/* <div className="projects__container">
-          <Project className="projects__single" />
-        </div>
-        <div className="projects__container">
-          <Project className="projects__single" />
-        </div>
-        <div className="projects__container">
-          <Project className="projects__single" />
-        </div>
-        <div className="projects__container">
-          <Project className="projects__single" />
-        </div> */}
       </div>
     </div>
   );

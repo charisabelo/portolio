@@ -3,7 +3,7 @@ import { DiGithubBadge } from "react-icons/di";
 
 const Project = (props) => {
   const { title, tech, image, description, github, site } = props;
-  console.log(typeof image);
+
   return (
     <div className="project">
       <div
@@ -16,17 +16,31 @@ const Project = (props) => {
           <div className="project__tech-container">
             <span className="project__tech-header">🛠 Tech Used:</span>
             {tech.map((item) => {
-              return <span className="project__tech">{item}</span>;
+              return (
+                <span key={item.id} className="project__tech">
+                  {item.name}
+                </span>
+              );
             })}
           </div>
           <div className="project__description">{description}</div>
         </div>
         <div className="project__buttons">
-          <a className="project__live-site" href={site} target="_blank">
+          <a
+            className="project__live-site"
+            href={site}
+            target="_blank"
+            rel="noreferrer"
+          >
             Live Site
           </a>
           {github && (
-            <a className="project__github" href={github} target="_blank">
+            <a
+              className="project__github"
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+            >
               <DiGithubBadge className="project__github-icon" />
               Github
             </a>

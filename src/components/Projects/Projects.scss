@@ -52,4 +52,28 @@
     color: #161a1d;
     background-color: $white;
   }
+
+  @include tablet-mid {
+    & {
+      padding: 2rem 0;
+    }
+  }
+
+  @include tablet {
+    &__header {
+      font-size: 8rem;
+    }
+  }
+
+  @include mobile-tablet {
+    &__header {
+      font-size: 6rem;
+    }
+  }
+
+  @include mobile {
+    &__header {
+      font-size: 5rem;
+    }
+  }
 }
