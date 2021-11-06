@@ -1,12 +1,11 @@
 import "./ResumeModal.scss";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { RiCloseFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const ResumeModal = ({ showResumeModal, setShowResumeModal }) => {
   const resumeRef = useRef();
-  const [zoom, setZoom] = useState(150);
 
   const closeResumeModal = (e) => {
     if (resumeRef.current === e.target) {

@@ -13,7 +13,6 @@
   &__photo {
     display: flex;
     align-self: center;
-    background-image: url("../../files/site.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 27rem;
@@ -24,6 +23,9 @@
   &__details {
     padding: 3rem 4rem;
     width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__header {
@@ -43,7 +45,6 @@
     align-self: flex-start;
     font-size: 2rem;
     font-weight: 600;
-    // margin-top: 0.7rem;
     margin-right: 2rem;
   }
 
@@ -62,7 +63,44 @@
   }
 
   &__description {
-    margin-top: 0.6rem;
+    margin-bottom: 1rem;
     font-size: 1.3rem;
+  }
+
+  &__buttons {
+    display: flex;
+  }
+
+  &__live-site,
+  &__github {
+    border: none;
+    margin-right: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: #0466c8;
+    color: $white;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  &__github-icon {
+    margin-right: 0.2rem;
+  }
+
+  &__live-site:link,
+  &__github:link,
+  &__live-site:visited,
+  &__github:visited,
+  &__live-site:active,
+  &__github:active,
+  &__live-site:hover,
+  &__github:hover {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__github {
+    display: flex;
+    align-items: center;
   }
 }
