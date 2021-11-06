@@ -46,6 +46,7 @@
   &__arrow-container {
     position: absolute;
     bottom: 0;
+    z-index: 1;
   }
 
   &__arrow-icon {
@@ -53,6 +54,7 @@
     font-size: 8rem;
     cursor: pointer;
     animation: slideInUp 1s forwards;
+    z-index: 1;
   }
 
   &__link,
@@ -189,8 +191,10 @@
 @keyframes slideInUp {
   from {
     bottom: -20rem;
+    z-index: 1;
   }
   to {
     bottom: 0;
+    z-index: 1;
   }
 }
