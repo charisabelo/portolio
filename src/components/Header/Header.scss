@@ -178,6 +178,10 @@
       font-size: 2rem;
     }
 
+    &__about-container {
+      padding: 3rem 1rem;
+    }
+
     &__tech-container {
       width: 40rem;
     }
@@ -188,6 +192,14 @@
       height: 9rem;
       width: 9rem;
       background-position: center;
+    }
+
+    &__tech-css {
+      background-size: 105px;
+    }
+
+    &__tech-js {
+      background-size: 100px;
     }
   }
 
