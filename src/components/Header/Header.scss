@@ -139,6 +139,10 @@
     background-image: url("../../files/git.png");
   }
 
+  &__tech-python {
+    background-image: url("../../files/python.png");
+  }
+
   @include web-mid {
     &__heading {
       font-size: 7.2rem;
@@ -208,7 +212,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 85rem;
+      min-height: 100rem;
     }
 
     &__mid {

@@ -55,6 +55,9 @@ const Header = () => {
           <div className="header__tech-padding">
             <div className="header__tech header__tech-git"></div>
           </div>
+          <div className="header__tech-padding">
+            <div className="header__tech header__tech-python"></div>
+          </div>
         </div>
       </div>
     </div>
