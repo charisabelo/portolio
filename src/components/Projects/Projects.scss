@@ -2,7 +2,6 @@
 @use "../../partials/mixins.scss" as *;
 
 .projects {
-  // background-color: pink;
   min-height: 100vh;
   width: 100vw;
   max-width: 192rem;
@@ -10,7 +9,6 @@
   padding: 2rem 13.2rem;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
 
@@ -60,6 +58,10 @@
   }
 
   @include tablet {
+    & {
+      padding-top: 0;
+    }
+
     &__header {
       font-size: 8rem;
     }
