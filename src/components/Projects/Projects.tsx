@@ -2,7 +2,24 @@ import Project from "../Project/Project";
 import "./Projects.scss";
 import { projectItems } from "./ProjectItems";
 
-const Projects = () => {
+interface ProjectProps {}
+
+interface itemObj {
+  id: string;
+  title: string;
+  tech: techObject[];
+  image: string;
+  description: string;
+  github: string | null;
+  site: string;
+}
+
+interface techObject {
+  id: string;
+  name: string;
+}
+
+const Projects: React.FC<ProjectProps> = ({}) => {
   return (
     <div className="projects">
       <h1 className="projects__header">
@@ -10,10 +27,19 @@ const Projects = () => {
       </h1>
 
       <div className="projects__main">
-        {projectItems.map((item) => {
+        {projectItems.map((item: itemObj) => {
+          console.log(item);
           return (
             <div key={item.id} className="projects__container">
-              <Project key={item.id} className="projects__single" {...item} />
+              <Project
+                key={item.id}
+                title={item.title}
+                tech={item.tech}
+                image={item.image}
+                description={item.description}
+                github={item.github || ""}
+                site={item.site}
+              />
             </div>
           );
         })}

@@ -1,4 +1,12 @@
-export const projectItems = [
+export const projectItems: {
+  id: string;
+  title: string;
+  tech: { id: string; name: string }[];
+  image: string;
+  description: string;
+  github: string | null;
+  site: string;
+}[] = [
   {
     id: "1",
     title: "Island Traveler",
