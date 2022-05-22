@@ -1,14 +1,22 @@
 import "./ResumeModal.scss";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { RiCloseFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const ResumeModal = ({ showResumeModal, setShowResumeModal }) => {
-  const resumeRef = useRef();
+interface ResumeProps {
+  showResumeModal: boolean;
+  setShowResumeModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  const closeResumeModal = (e) => {
+const ResumeModal: React.FC<ResumeProps> = ({
+  showResumeModal,
+  setShowResumeModal,
+}) => {
+  const resumeRef = useRef<HTMLDivElement | null>(null);
+
+  const closeResumeModal = (e: React.MouseEvent<HTMLDivElement>) => {
     if (resumeRef.current === e.target) {
       setShowResumeModal(false);
     }

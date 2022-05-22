@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 
-function App() {
+const App: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -27,6 +27,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

@@ -6,7 +6,17 @@ import { Link } from "react-router-dom";
 import { GrFormClose } from "react-icons/gr";
 import { VscThreeBars } from "react-icons/vsc";
 
-const Navbar = ({ openModal, setShowModal, showModal }) => {
+interface NavbarProps {
+  openModal: () => void;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  showModal: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  openModal,
+  setShowModal,
+  showModal,
+}) => {
   const [showResumeModal, setShowResumeModal] = useState(false);
   const [showNavLinks, setShowNavLinks] = useState(false);
 

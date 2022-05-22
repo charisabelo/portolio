@@ -4,27 +4,45 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { EmojiProvider, Emoji } from "react-apple-emojis";
-import emojiData from "react-apple-emojis/lib/data.json";
+import emojiData from "react-apple-emojis/src/data.json";
 
-const ContactModal = ({ showModal, setShowModal, openModal }) => {
-  const modalRef = useRef();
-  const form = useRef();
+interface ContactModalProps {
+  showModal: boolean;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  openModal: () => void;
+}
 
-  const closeModal = (e) => {
+const ContactModal: React.FC<ContactModalProps> = ({
+  showModal,
+  setShowModal,
+  openModal,
+}) => {
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const closeModal = (e: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current === e.target) {
       setShowModal(false);
     }
   };
 
-  const sendEmail = (e) => {
+  const REACT_APP_SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID!;
+
+  const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
+
+  const fc = form.current!;
+
+  const REACT_APP_USER_ID: string = process.env.REACT_APP_USER_ID!;
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_USER_ID
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        fc,
+        REACT_APP_USER_ID
       )
       .then(
         (result) => {
@@ -35,7 +53,7 @@ const ContactModal = ({ showModal, setShowModal, openModal }) => {
         }
       );
 
-    e.target.reset();
+    (e.target as HTMLFormElement).reset();
   };
 
   return (
@@ -122,7 +140,6 @@ const ContactModal = ({ showModal, setShowModal, openModal }) => {
                         Message
                       </label>
                       <textarea
-                        type=""
                         className="contact-modal__message"
                         name="message"
                         placeholder="Write your message here..."

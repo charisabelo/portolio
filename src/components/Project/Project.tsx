@@ -1,7 +1,21 @@
 import "./Project.scss";
 import { DiGithubBadge } from "react-icons/di";
 
-const Project = (props) => {
+interface ProjectProps {
+  title: string;
+  tech: itemObject[];
+  image: string;
+  description: string;
+  github: string;
+  site: string;
+}
+
+interface itemObject {
+  id: string;
+  name: string;
+}
+
+const Project: React.FC<ProjectProps> = (props) => {
   const { title, tech, image, description, github, site } = props;
 
   return (
@@ -15,7 +29,7 @@ const Project = (props) => {
           <div className="project__header">{title}</div>
           <div className="project__tech-container">
             <span className="project__tech-header">🛠 Tech Used:</span>
-            {tech.map((item) => {
+            {tech.map((item: itemObject) => {
               return (
                 <span key={item.id} className="project__tech">
                   {item.name}
