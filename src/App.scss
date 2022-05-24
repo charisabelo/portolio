@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: $white;
 }
 
 *,
@@ -31,5 +32,5 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
-  background-color: $bg;
+  background-color: $black;
 }

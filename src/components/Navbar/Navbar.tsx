@@ -5,6 +5,7 @@ import ResumeModal from "../ResumeModal/ResumeModal";
 import { Link } from "react-router-dom";
 import { GrFormClose } from "react-icons/gr";
 import { VscThreeBars } from "react-icons/vsc";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 
 interface NavbarProps {
   openModal: () => void;
@@ -38,14 +39,14 @@ const Navbar: React.FC<NavbarProps> = ({
         id={showNavLinks ? "mobile-nav" : ""}
       >
         <div className="navbar__link" onClick={openModal}>
-          hire me.
+          hire me
         </div>
         <div className="navbar__link" onClick={openResumeModal}>
-          resume.
+          resume
         </div>
-        <a href="#projects" className="navbar__link">
+        {/* <a href="#projects" className="navbar__link">
           projects.
-        </a>
+        </a> */}
         <Link
           className="navbar__link"
           to={{
@@ -53,7 +54,8 @@ const Navbar: React.FC<NavbarProps> = ({
           }}
           target="_blank"
         >
-          linkedin.
+          {/* linkedin */}
+          <SiLinkedin />
         </Link>
         <Link
           className="navbar__link"
@@ -62,7 +64,8 @@ const Navbar: React.FC<NavbarProps> = ({
           }}
           target="_blank"
         >
-          github.
+          {/* github */}
+          <SiGithub />
         </Link>
       </div>
 
