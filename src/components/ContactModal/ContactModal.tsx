@@ -44,10 +44,12 @@ const ContactModal: React.FC<ContactModalProps> = ({
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result);
+          console.log(form.current);
         },
         (error) => {
-          console.log(error.text);
+          console.log(error);
+          console.log("hi");
         }
       );
 
