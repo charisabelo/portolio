@@ -22,13 +22,12 @@ interface techObject {
 const Projects: React.FC<ProjectProps> = ({}) => {
   return (
     <div className="projects">
-      <h1 className="projects__header">
+      {/* <h1 className="projects__header">
         <span>projects</span> 💻{" "}
-      </h1>
+      </h1> */}
 
       <div className="projects__main">
         {projectItems.map((item: itemObj) => {
-          console.log(item);
           return (
             <div key={item.id} className="projects__container">
               <Project

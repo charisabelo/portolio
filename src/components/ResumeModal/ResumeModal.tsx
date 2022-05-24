@@ -4,6 +4,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import { RiCloseFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { CgClose } from "react-icons/cg";
 
 interface ResumeProps {
   showResumeModal: boolean;
@@ -45,9 +46,12 @@ const ResumeModal: React.FC<ResumeProps> = ({
                 <AiOutlineDownload className="resume-modal__icon" />
                 DOWNLOAD
               </Link>
-              <button className="resume-modal__exit-btn" onClick={exitButton}>
-                <RiCloseFill className="resume-modal__exit-icon" />
-              </button>
+
+              <RiCloseFill
+                className="resume-modal__exit-icon"
+                onClick={exitButton}
+                style={{ fill: "#000" }}
+              />
             </div>
           </motion.div>
         </div>

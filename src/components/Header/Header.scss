@@ -2,19 +2,18 @@
 @use "../../partials/variables.scss" as *;
 
 .header {
-  height: 100vh;
+  height: 87vh;
   display: flex;
-  width: 100vw;
+  justify-content: space-between;
+  width: 100%;
   max-width: 192rem;
   overflow: hidden;
 
   &__left {
-    width: 48%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    // background-color: red;
   }
 
   &__about-container {
@@ -23,7 +22,7 @@
   }
 
   &__heading {
-    font-size: 9rem;
+    font-size: 8rem;
     font-weight: 700;
   }
 
@@ -68,8 +67,6 @@
   }
 
   &__right {
-    // background-color: grey;
-    width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,67 +77,50 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 70rem;
+    width: 60rem;
     animation: slideInLeft 1s forwards;
   }
 
-  &__tech {
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 14rem;
-    width: 14rem;
-    background-position: center;
+  &__tech-icon {
+    font-size: 100px;
+    height: min-content;
   }
 
-  &__tech-padding {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+  &__sass {
+    margin: 0 2rem 0 1.5rem;
   }
 
-  &__tech-html {
-    background-image: url("../../files/html.png");
-    background-size: 127px;
+  &__typescript--background {
+    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-top: 0.6rem;
+    width: 88px;
+    height: 88px;
+    background: linear-gradient(to bottom right, #1fd1f9 0%, #b621fe 74%);
   }
 
-  &__tech-css {
-    background-image: url("../../files/css.png");
+  &__typescript {
+    background-color: black;
+    font-size: 8.8rem;
+    margin-bottom: 0.2rem;
   }
 
-  &__tech-js {
-    background-image: url("../../files/js.png");
-    background-size: 135px;
+  &__nodejs--container {
+    position: relative;
+    height: 100px;
   }
 
-  &__tech-sass {
-    background-image: url("../../files/sass.png");
+  &__nodejs {
+    position: relative;
+    bottom: 2rem;
+    font-size: 140px;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
-  &__tech-react {
-    background-image: url("../../files/react.png");
-    background-size: 120px;
-  }
-
-  &__tech-nodejs {
-    background-image: url("../../files/nodejs.png");
-  }
-
-  &__tech-express {
-    background-image: url("../../files/express.svg");
-  }
-
-  &__tech-mysql {
-    background-image: url("../../files/mysql.png");
-    background-size: 170px;
-  }
-
-  &__tech-git {
-    background-image: url("../../files/git.png");
-  }
-
-  &__tech-python {
-    background-image: url("../../files/python-2.png");
+  &__mysql {
+    margin-left: 2rem;
+    margin-right: 1rem;
   }
 
   @include web-mid {
@@ -154,22 +134,6 @@
 
     &__tech-container {
       width: 60rem;
-    }
-
-    &__tech {
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 11rem;
-      width: 11rem;
-      background-position: center;
-    }
-
-    &__tech-css {
-      background-size: 128px;
-    }
-
-    &__tech-js {
-      background-size: 118px;
     }
   }
 
@@ -188,22 +152,6 @@
 
     &__tech-container {
       width: 50rem;
-    }
-
-    &__tech {
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 9rem;
-      width: 9rem;
-      background-position: center;
-    }
-
-    &__tech-css {
-      background-size: 105px;
-    }
-
-    &__tech-js {
-      background-size: 100px;
     }
   }
 
@@ -237,14 +185,6 @@
     &__about {
       font-size: 2.3rem;
     }
-
-    &__tech-css {
-      background-size: 104px;
-    }
-
-    &__tech-js {
-      background-size: 98px;
-    }
   }
 
   @include tablet {
@@ -274,6 +214,12 @@
     }
   }
 
+  @include mobile {
+    & {
+      height: 110rem;
+    }
+  }
+
   @include mobile-adjust {
     &__heading {
       font-size: 4rem;
@@ -286,7 +232,6 @@
 
   @include mobile-mix {
     & {
-      height: 95rem;
       padding-top: 5rem;
     }
 

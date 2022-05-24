@@ -3,10 +3,10 @@
 
 .projects {
   min-height: 100vh;
-  width: 100vw;
-  max-width: 192rem;
+  width: 100%;
+  // max-width: 192rem;
   overflow: hidden;
-  padding: 2rem 13.2rem;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;

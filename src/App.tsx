@@ -12,19 +12,21 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar
-          openModal={openModal}
-          setShowModal={setShowModal}
-          showModal={showModal}
-        />
-        <div className="app__main">
-          <Switch>
-            <Route path="/" exact component={Home}></Route>
-          </Switch>
-        </div>
-      </BrowserRouter>
+    <div className="app">
+      <div className="app__body">
+        <BrowserRouter>
+          <Navbar
+            openModal={openModal}
+            setShowModal={setShowModal}
+            showModal={showModal}
+          />
+          <div className="app__main">
+            <Switch>
+              <Route path="/" exact component={Home}></Route>
+            </Switch>
+          </div>
+        </BrowserRouter>
+      </div>
     </div>
   );
 };

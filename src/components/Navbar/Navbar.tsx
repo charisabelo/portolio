@@ -3,7 +3,7 @@ import ContactModal from "../ContactModal/ContactModal";
 import { useState } from "react";
 import ResumeModal from "../ResumeModal/ResumeModal";
 import { Link } from "react-router-dom";
-import { GrFormClose } from "react-icons/gr";
+import { CgClose } from "react-icons/cg";
 import { VscThreeBars } from "react-icons/vsc";
 import { SiLinkedin, SiGithub } from "react-icons/si";
 
@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <div className="navbar">
-      <div className="navbar__logo">char isabelo</div>
+      <div className="navbar__logo">Char Isabelo</div>
       <div
         className={
           showNavLinks ? "navbar__links-list active" : "navbar__links-list"
@@ -39,14 +39,12 @@ const Navbar: React.FC<NavbarProps> = ({
         id={showNavLinks ? "mobile-nav" : ""}
       >
         <div className="navbar__link" onClick={openModal}>
-          hire me
+          Hire Me
         </div>
         <div className="navbar__link" onClick={openResumeModal}>
-          resume
+          Resume
         </div>
-        {/* <a href="#projects" className="navbar__link">
-          projects.
-        </a> */}
+
         <Link
           className="navbar__link"
           to={{
@@ -54,8 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({
           }}
           target="_blank"
         >
-          {/* linkedin */}
-          <SiLinkedin />
+          <SiLinkedin className="navbar__linkedin" />
         </Link>
         <Link
           className="navbar__link"
@@ -64,15 +61,14 @@ const Navbar: React.FC<NavbarProps> = ({
           }}
           target="_blank"
         >
-          {/* github */}
-          <SiGithub />
+          <SiGithub className="navbar__github" />
         </Link>
       </div>
 
       {!showNavLinks ? (
         <VscThreeBars className="navbar__bars" onClick={toggleMobileNav} />
       ) : (
-        <GrFormClose className="navbar__x" onClick={toggleMobileNav} />
+        <CgClose className="navbar__x" onClick={toggleMobileNav} />
       )}
 
       <ResumeModal
