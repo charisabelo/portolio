@@ -2,10 +2,6 @@
 @use "../../partials/mixins.scss" as *;
 
 .projects {
-  min-height: 100vh;
-  width: 100%;
-  // max-width: 192rem;
-  overflow: hidden;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -26,30 +22,21 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    // scroll-snap-type: y mandatory;
+    // overflow-y: scroll;
+    // height: 100%;
   }
 
   &__container {
     padding: 1.5rem;
+    // scroll-snap-align: start;
   }
 
-  // &__container:nth-of-type(even) div {
-  //   background-color: $white;
-  // }
-
-  // &__container:nth-of-type(odd) div {
-  //   background-color: #161a1d;
-  //   color: $white;
-  // }
-
-  // &__container:nth-of-type(even) div .project__tech {
-  //   color: $white;
-  //   background-color: #161a1d;
-  // }
-
-  // &__container:nth-of-type(odd) div .project__tech {
-  //   color: #161a1d;
-  //   background-color: $white;
-  // }
+  @include web-tablet-adjust {
+    &__container {
+      height: 80rem;
+    }
+  }
 
   @include tablet-mid {
     & {
@@ -68,6 +55,10 @@
   }
 
   @include mobile-tablet {
+    & {
+      padding: 0;
+    }
+
     &__header {
       font-size: 6rem;
     }

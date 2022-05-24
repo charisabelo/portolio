@@ -22,10 +22,6 @@ interface techObject {
 const Projects: React.FC<ProjectProps> = ({}) => {
   return (
     <div className="projects">
-      {/* <h1 className="projects__header">
-        <span>projects</span> 💻{" "}
-      </h1> */}
-
       <div className="projects__main">
         {projectItems.map((item: itemObj) => {
           return (
