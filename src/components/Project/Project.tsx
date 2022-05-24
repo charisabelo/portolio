@@ -19,7 +19,8 @@ const Project: React.FC<ProjectProps> = (props) => {
   const { title, tech, image, description, github, site } = props;
 
   return (
-    <div className="project">
+    <section className="project">
+      <div className="project--blur"></div>
       <div
         className="project__photo"
         style={{ backgroundImage: `url(${image})` }}
@@ -28,7 +29,7 @@ const Project: React.FC<ProjectProps> = (props) => {
         <div className="project__main">
           <div className="project__header">{title}</div>
           <div className="project__tech-container">
-            <span className="project__tech-header">🛠 Tech Used:</span>
+            <span className="project__tech-header">Tech Used:</span>
             {tech.map((item: itemObject) => {
               return (
                 <span key={item.id} className="project__tech">
@@ -61,7 +62,7 @@ const Project: React.FC<ProjectProps> = (props) => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

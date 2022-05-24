@@ -28,30 +28,32 @@ const ContactModal: React.FC<ContactModalProps> = ({
 
   const REACT_APP_TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID!;
 
-  const fc = form.current!;
+  let fc = form.current!;
 
   const REACT_APP_USER_ID: string = process.env.REACT_APP_USER_ID!;
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        REACT_APP_SERVICE_ID,
-        REACT_APP_TEMPLATE_ID,
-        fc,
-        REACT_APP_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result);
-          console.log(form.current);
-        },
-        (error) => {
-          console.log(error);
-          console.log("hi");
-        }
-      );
+    if (fc) {
+      emailjs
+        .sendForm(
+          REACT_APP_SERVICE_ID,
+          REACT_APP_TEMPLATE_ID,
+          fc,
+          REACT_APP_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log(result);
+            console.log(form.current);
+          },
+          (error) => {
+            console.log(error);
+            console.log("hi");
+          }
+        );
+    }
 
     (e.target as HTMLFormElement).reset();
   };

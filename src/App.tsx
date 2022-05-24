@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./App.scss";
 import { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 
 const App: React.FC = () => {
@@ -25,6 +26,7 @@ const App: React.FC = () => {
               <Route path="/" exact component={Home}></Route>
             </Switch>
           </div>
+          <Footer />
         </BrowserRouter>
       </div>
     </div>

@@ -2,29 +2,42 @@
 @use "../../partials/mixins.scss" as *;
 
 .project {
+  position: relative;
   overflow: hidden;
-  width: 97rem;
-  border-radius: 0.7rem;
-  height: 45rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 100vw;
+  height: 100vh;
   padding: 6rem 7.5rem;
   display: flex;
+  justify-content: space-evenly;
+
+  &--blur {
+    margin: 15rem 0 0 0;
+    position: absolute;
+    background: #89d4cf;
+    z-index: 1;
+    filter: blur(50px);
+    width: 30rem;
+    height: 40rem;
+  }
 
   &__photo {
     display: flex;
     align-self: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 27rem;
-    width: 40rem;
-    border-radius: 0.7rem;
+    height: 45rem;
+    width: 67rem;
+    z-index: 2;
+    border-radius: 5px;
   }
 
   &__details {
     padding: 3rem 4rem;
-    width: 40rem;
+    height: 45rem;
+    width: 45rem;
     display: flex;
     flex-direction: column;
+    align-self: center;
     justify-content: space-between;
   }
 
@@ -54,6 +67,9 @@
   }
 
   &__tech {
+    background-color: #89d4cf;
+    background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
+
     margin-right: 0.5rem;
     padding: 0.5rem 1rem;
     margin-bottom: 1rem;
@@ -77,7 +93,7 @@
     margin-right: 1.1rem;
     padding: 1rem 2rem;
     border-radius: 2rem;
-    background-color: $btn;
+    background-color: #6e45e1;
     color: $white;
     font-size: 1.4rem;
     font-weight: 500;

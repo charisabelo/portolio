@@ -32,24 +32,24 @@
     padding: 1.5rem;
   }
 
-  &__container:nth-of-type(even) div {
-    background-color: $white;
-  }
+  // &__container:nth-of-type(even) div {
+  //   background-color: $white;
+  // }
 
-  &__container:nth-of-type(odd) div {
-    background-color: #161a1d;
-    color: $white;
-  }
+  // &__container:nth-of-type(odd) div {
+  //   background-color: #161a1d;
+  //   color: $white;
+  // }
 
-  &__container:nth-of-type(even) div .project__tech {
-    color: $white;
-    background-color: #161a1d;
-  }
+  // &__container:nth-of-type(even) div .project__tech {
+  //   color: $white;
+  //   background-color: #161a1d;
+  // }
 
-  &__container:nth-of-type(odd) div .project__tech {
-    color: #161a1d;
-    background-color: $white;
-  }
+  // &__container:nth-of-type(odd) div .project__tech {
+  //   color: #161a1d;
+  //   background-color: $white;
+  // }
 
   @include tablet-mid {
     & {
