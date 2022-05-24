@@ -3,8 +3,6 @@ import { GrFormClose } from "react-icons/gr";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
-import { EmojiProvider, Emoji } from "react-apple-emojis";
-import emojiData from "react-apple-emojis/src/data.json";
 
 interface ContactModalProps {
   showModal: boolean;
@@ -70,13 +68,7 @@ const ContactModal: React.FC<ContactModalProps> = ({
               </div>
               <div className="contact-modal__main-container">
                 <div className="contact-modal__header-container">
-                  <h1 className="contact-modal__header">contact me</h1>
-                  <EmojiProvider data={emojiData}>
-                    <Emoji
-                      name="love-letter"
-                      className="contact-modal__emoji"
-                    />
-                  </EmojiProvider>
+                  <h1 className="contact-modal__header">Contact</h1>
                 </div>
 
                 <form
