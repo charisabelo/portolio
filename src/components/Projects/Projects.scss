@@ -62,6 +62,17 @@
     &__header {
       font-size: 6rem;
     }
+
+    &__container {
+      height: 70rem;
+    }
+  }
+
+  @include mobile-adjust {
+    &__container {
+      padding: 0;
+      height: 65rem;
+    }
   }
 
   @include mobile {

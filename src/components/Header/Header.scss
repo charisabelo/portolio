@@ -214,12 +214,6 @@
     }
   }
 
-  @include mobile {
-    & {
-      height: 110rem;
-    }
-  }
-
   @include mobile-adjust {
     &__heading {
       font-size: 4rem;
@@ -230,9 +224,16 @@
     }
   }
 
+  @include mobile {
+    & {
+      height: 110rem;
+      padding-top: 0rem;
+    }
+  }
+
   @include mobile-mix {
     & {
-      padding-top: 5rem;
+      height: 100rem;
     }
 
     &__left {

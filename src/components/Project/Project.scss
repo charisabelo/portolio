@@ -188,10 +188,12 @@
     }
   }
 
-  @include mobile {
+  @include mobile-adjust {
     & {
+      margin-right: auto;
+      margin-left: auto;
       padding: 0;
-      width: 30rem;
+      max-width: 90%;
       height: 58rem;
     }
 
@@ -204,7 +206,8 @@
 
     &__photo {
       height: 18rem;
-      width: 27rem;
+      // width: 27rem;
+      max-width: 90%;
     }
   }
 }
